@@ -28,7 +28,14 @@ componentDidMount(){
         <h1>List Of Available Restaurants</h1>
         <ul>
       {this.state.restaurants.map( (restaurant) => {
-        return   <li> {restaurant.restaurantId}  {restaurant.restaurantName} {restaurant.restaurantPhoneNumber} </li>
+        return   <li>  <img src={require('./dish3.jpg')} />
+
+          <img src={require('./dish4.jpg')} />
+
+ {restaurant.restaurantId} <br/> {restaurant.restaurantName} <br/> {restaurant.restaurantPhoneNumber}
+<img  src={require('./dish1.jpg')} />
+<img src={require('./dish2.jpg')} />
+ </li>
         }) }
       </ul>
       </div>

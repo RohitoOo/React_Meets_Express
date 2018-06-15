@@ -9,7 +9,11 @@ app.get('/restaurants',  (req,res) => {
   const restaurants = [ {
 	"restaurantId" : "1.",
 	"restaurantName" : "Burger King",
-	"restaurantPhoneNumber" : "998923976"
+	"restaurantPhoneNumber" : "998923976",
+  "restaurantImage" : [
+    {
+     "url": "images/dish1.jpg"
+  }]
 
 }, {
   "restaurantId" : "2.",
