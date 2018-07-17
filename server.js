@@ -10,16 +10,21 @@ app.get('/restaurants', (req, res) => {
       "restaurantId": "1.",
       "restaurantName": "Burger King",
       "restaurantPhoneNumber": "998923976",
-      "restaurantImage": "https://image.ibb.co/mFYRKJ/burger_King.png" 
+      "restaurantImage": "https://image.ibb.co/mFYRKJ/burger_King.png",
+      "menu": [{"one" : "ItemOne"},{"two" : "ItemTwo"}],
 
     }, {
       "restaurantId": "2.",
       "restaurantName": "KFC",
-      "restaurantPhoneNumber": "998923976"
+      "restaurantPhoneNumber": "998923976",
+      "restaurantImage": "https://image.ibb.co/mVD46y/kfc.png",
+      "restaurantMenu": [{"one" : "ItemOne"}],
     }, {
       "restaurantId": "3.",
       "restaurantName": "McDonalds",
-      "restaurantPhoneNumber": "998923976"
+      "restaurantPhoneNumber": "998923976",
+      "restaurantImage": "https://image.ibb.co/e9Riid/mcdonalds.png",
+      "restaurantMenu": [{"one" : "ItemOne"}],
     }, {
       "restaurantId": "4.",
       "restaurantName": "Burger King",

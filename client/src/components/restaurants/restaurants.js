@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './restaurants.css';
 import { Button , Jumbotron } from 'react-bootstrap';
+import Menu from '../Menu/Menu'
+
 
 class Restaurants extends Component {
 
@@ -34,6 +36,7 @@ class Restaurants extends Component {
               <img src={restaurant.restaurantImage}/>
               <br/> &nbsp; {restaurant.restaurantName} &nbsp;
                 {restaurant.restaurantPhoneNumber}
+                <Menu />
             </li>
             </Jumbotron>
           })
