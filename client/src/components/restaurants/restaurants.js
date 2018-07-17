@@ -27,22 +27,24 @@ class Restaurants extends Component {
     return (<div >
       <h1>List Of Available Restaurants</h1>
 
-      <ul>
+
 
         {
           this.state.restaurants.map((restaurant) => {
             return <Jumbotron >
+              <ul>
               <li>
               <img src={restaurant.restaurantImage}/>
               <br/> &nbsp; {restaurant.restaurantName} &nbsp;
                 {restaurant.restaurantPhoneNumber}
-                <Menu />
+                <Menu restaurants = {restaurant}/>
             </li>
+            </ul>
             </Jumbotron>
           })
         }
 
-      </ul>
+
 
     </div>);
   }
