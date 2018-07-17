@@ -58,16 +58,20 @@ var Restaurant = mongoose.model('Restaurant' , Schema)
 app.get('/restaurants', (req, res) => {
 
 
+console.log('Express Server Is Running')
+
   Restaurant.find({}, (err, restaurants) => {
 
     if(err) res.json(err);
     else res.json(restaurants)
   })
 
-
 })
 
+app.get('/' , (req,res) => {
 
+  res.send('Express Server Is Running')
+})
 
 
   // This info will be pull from the mongo database using mongoose query
