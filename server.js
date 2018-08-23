@@ -38,7 +38,7 @@ app.get('/restaurants', (req, res) => {
 
 console.log('Express Server Is Running')
 
-  Restaurant.find({restaurantPhoneNumber : "998923976"}, (err, restaurants) => {
+  Restaurant.find({}, (err, restaurants) => {
 
     if(err) res.json(err);
     else res.json(restaurants)
