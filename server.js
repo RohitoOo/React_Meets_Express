@@ -26,12 +26,10 @@ var Schema = new mongoose.Schema({
     restaurantId : {type : String},
     restaurantName : {type : String},
     restaurantPhoneNumber : {type : String},
-    restaurantPhoneNumber : {type: String},
     restaurantImage : {type : String},
     item1 : {type : String},
     price : {type : String},
     })
-
 
 var Restaurant = mongoose.model('Restaurant' , Schema)
 
@@ -40,19 +38,17 @@ app.get('/restaurants', (req, res) => {
 
 console.log('Express Server Is Running')
 
-  Restaurant.find({}, (err, restaurants) => {
+  Restaurant.find({restaurantPhoneNumber : "998923976"}, (err, restaurants) => {
 
     if(err) res.json(err);
     else res.json(restaurants)
   })
-
 })
 
 app.get('/' , (req,res) => {
 
   res.send('Express Server Is Running')
 })
-
 
 app.listen(5000, (req, res) => {
   console.log("Express Server Running on Port 5000")

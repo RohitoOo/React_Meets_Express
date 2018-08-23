@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './restaurants.css';
-import { Button , Jumbotron } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 import Menu from '../Menu/Menu'
 
 
@@ -13,9 +13,10 @@ class Restaurants extends Component {
       restaurants: []
     }
   }
+
+
   //Used Proxy in Package.json
   //fetch(http://localhost:5000/restaurants)
-
   componentDidMount() {
 
     fetch('/restaurants').then(res => res.json()).then(restaurants => this.setState({restaurants},
@@ -24,16 +25,15 @@ class Restaurants extends Component {
 
   render() {
     return (<div >
+      <br/>
       <h1>List Of Available Restaurants</h1>
-
-
-
+      <br/>
         {
           this.state.restaurants.map((restaurant) => {
-            return <Jumbotron >
+            return <Jumbotron>
               <ul>
               <li>
-              <img src={restaurant.restaurantImage}/>
+              <img alt="dish" src={restaurant.restaurantImage}/>
               <br/> &nbsp; {restaurant.restaurantName} &nbsp;
                 {restaurant.restaurantPhoneNumber}
                 <Menu restaurants = {restaurant}/>
@@ -42,9 +42,6 @@ class Restaurants extends Component {
             </Jumbotron>
           })
         }
-
-
-
     </div>);
   }
 }
