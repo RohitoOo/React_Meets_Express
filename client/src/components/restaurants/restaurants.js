@@ -18,7 +18,8 @@ class Restaurants extends Component {
 
   componentDidMount() {
 
-    fetch('/restaurants').then(res => res.json()).then(restaurants => this.setState({restaurants}, () => console.log("Restaurants are being fetched from Express", restaurants)))
+    fetch('/restaurants').then(res => res.json()).then(restaurants => this.setState({restaurants},
+      () => console.log("Restaurants are being fetched from Express", restaurants)))
   }
 
   render() {

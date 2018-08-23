@@ -15,7 +15,7 @@ db.once('open', function() {
 // Check for DB errors
 
 db.on('error', function(err) {
-  console.log("err")
+  console.log("DB err")
 });
 
 //Init App
